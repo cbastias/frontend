@@ -3,7 +3,6 @@ services:
   - docker
 
 before_install:
- - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
  - docker build -t cbastias/frontend:v3 -f Dockerfile.dev .
 
 script:
