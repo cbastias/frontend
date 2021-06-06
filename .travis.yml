@@ -11,10 +11,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: us-east-1
-  app: frontend
-  env: frontend-env
+  app: react-web
+  env: Reactweb-env
   bucket_name: elasticbeanstalk-us-east-1-491023448192
-  bucket_path: frontend
+  bucket_path: react-web
   on:
     branch: main
   access_key_id: "$AWS_ACCESS_KEY"
