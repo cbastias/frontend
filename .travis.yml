@@ -3,6 +3,7 @@ services:
   - docker
 
 before_install:
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  - docker build -t cbastias/frontend:v3 -f Dockerfile.dev .
 
 script:
@@ -19,4 +20,3 @@ deploy:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  
