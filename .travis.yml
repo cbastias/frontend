@@ -6,4 +6,4 @@ before_install:
  - docker build -t cbastias/frontend:v1 -f Dockerfile.dev .
 
 script:
- - docker run -e CI=true  cbastias/frontend:v1 npm run test -- --coverage
+ - docker run -e CI=true  cbastias/frontend:v2 npm run test -- --coverage
